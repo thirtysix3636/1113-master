@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     DrawerLayout drawerLayout;
-    LinearLayout main_top_layout;
+    LinearLayout main_top_layout, main_list_layout;
     Button list_btn, home_btn;
 
     @Override
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         main_top_layout = (LinearLayout)findViewById(R.id.main_top_layout);
+        main_list_layout = (LinearLayout)findViewById(R.id.main_list_layout);
         drawerLayout = (DrawerLayout) findViewById(R.id.left_Drawer);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
@@ -85,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDrawerOpened(View drawerView) {
                 main_top_layout.setVisibility(View.INVISIBLE);
+                //main_list_layout.setVisibility(View.INVISIBLE);
                 Button drawer_user_nick = (Button)findViewById(R.id.drawer_user_nickName);
                 drawer_user_nick.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -104,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDrawerClosed(View drawerView) {
                 main_top_layout.setVisibility(View.VISIBLE);
+                main_list_layout.setVisibility(View.VISIBLE);
             }
 
             @Override
