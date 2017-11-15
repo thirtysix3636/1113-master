@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a1102.MainActivity">
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/left_Drawer"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+        <android.support.design.widget.NavigationView
+            android:id="@+id/drawer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:menu="@menu/navigaion_menu"
+            android:layout_gravity="start"
+            >
+
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/topLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/list_menu_btn"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:background="@android:drawable/ic_menu_sort_by_size" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="글쓰기"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/home_btn"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_home" />
+
+        </LinearLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="550dp"
+            android:paddingTop="50dp"
+            tools:context=".WriteActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <EditText
+                    android:id="@+id/subjectText"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:hint="상품명(제목을 입력하세요)"
+                    android:inputType="text"
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/salesView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="거래종류"/>
+
+                    <Spinner
+                        android:id="@+id/saleSpinner"
+                        android:layout_width="150dp"
+                        android:layout_height="25dp"
+                        android:entries="@array/sales_arrays"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    >
+                    <TextView
+                        android:id="@+id/categoryView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="카테고리"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectView"
+                        android:layout_weight="1"/>
+
+                    <Spinner
+                        android:id="@+id/categorySpinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/category1_arrays"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toRightOf="@+id/categoryView"
+                        app:layout_constraintTop_toBottomOf="@+id/subjectText"
+                        android:layout_weight="1"
+                        />
+                    <Spinner
+                        android:id="@+id/categorySpinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="가격"
+                        android:textSize="20dp"
+                        android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/priceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="판매가격(원)"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:id="@+id/descriptionView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="본문 내용"
+                    android:textSize="17dp"
+                    android:textAlignment="center"
+                    />
+
+                <EditText
+                    android:id="@+id/descriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="400"
+                    android:lines="13"
+                    android:scrollbars="vertical"
+                    android:gravity="top"
+                    android:hint="본문 내용을 입력해주세요."
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:weightSum="2">
+                <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="판매 지역"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:id="@+id/addressButton"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주소 찾기"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/addressTextRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주소 미지정"
+                    android:textAlignment="center"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                <TextView
+                    android:id="@+id/optionView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="매물상태"
+                    />
+                <Spinner
+                    android:id="@+id/productSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:entries="@array/statue_arrays"
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+                <TextView
+                    android:id="@+id/negoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="흥정유무"
+                    />
+
+                <Spinner
+                    android:id="@+id/negoSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="25dp"
+                    android:entries="@array/nego_arrays"
+                    app:layout_constraintLeft_toRightOf="@+id/negoView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productSpinner" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="등록하기"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@drawable/nav_item_color_state"
+        app:itemTextColor="@drawable/nav_item_color_state"
+        app:menu="@menu/bottom_navigation_main"
+        tools:layout_editor_absoluteY="33dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">1102</string>
+    <string name="country_prompt">분류 선택</string>
+
+    <string-array name="category1_arrays">
+        <item>컴퓨터</item>
+        <item>모바일</item>
+        <item>생활용품</item>
+        <item>의류</item>
+    </string-array>
+
+    <string-array name="nego_arrays">
+        <item>쿨거래</item>
+        <item>네고없음</item>
+        <item>네고가능</item>
+    </string-array>
+
+    <string-array name="sales_arrays">
+        <item>팝니다.</item>
+        <item>무료나눔</item>
+        <item>삽니다.</item>
+    </string-array>
+
+    <string-array name="statue_arrays">
+        <item>새 제품</item>
+        <item>양호</item>
+        <item>1~2번 착용</item>
+        <item>착용감 있음</item>
+        <item>급처</item>
+    </string-array>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+
+    <ScrollView
+        android:id="@+id/scrollView_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <!-- textView 순서 - 글제목, 가격, 날짜, -->
+            <TextView
+                android:id="@+id/board_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="제목" />
+
+            <TextView
+                android:id="@+id/board_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="가격" />
+
+            <TextView
+                android:id="@+id/board_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="날짜" />
+            <TextView
+                android:id="@+id/board_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="작성자" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="3"
+                android:background="@android:drawable/title_bar"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/board_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/sym_action_call"
+                    android:text="전화" />
+
+                <Button
+                    android:id="@+id/board_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/ic_menu_send"
+                    android:text="문자" />
+
+                <Button
+                    android:id="@+id/board_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/sym_action_chat"
+                    android:text="채팅" />
+
+                <Button
+                    android:id="@+id/board_writer_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="65dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_search"
+                    android:text="작성글보기" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext"/>
+            <LinearLayout
+                android:id="@+id/board_bottom_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_weight="3">
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.1"
+                    android:background="@drawable/ic_chat"
+                    android:text="댓글" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

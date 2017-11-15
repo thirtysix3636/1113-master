@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="검색"
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="채팅"
+        android:enabled="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_keyword"
+        android:icon="@drawable/ic_keyword"
+        android:title="알림"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_write"
+        android:title="글쓰기"
+        android:enabled="true"
+        android:icon="@drawable/ic_write"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_myinfo"
+        android:title="내정보"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_myinfo"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>
