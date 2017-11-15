@@ -12,9 +12,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     DrawerLayout drawerLayout;
+    ListView drawerList;
     LinearLayout main_top_layout, main_list_layout;
     Button list_btn, home_btn;
 
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         main_top_layout = (LinearLayout)findViewById(R.id.main_top_layout);
         main_list_layout = (LinearLayout)findViewById(R.id.main_list_layout);
         drawerLayout = (DrawerLayout) findViewById(R.id.left_Drawer);
+        drawerList = (ListView)findViewById(R.id.drawer_list); //리스트 메뉴
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

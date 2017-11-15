@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by Jeff_Hwang on 2017. 11. 13..
  */
 public class DBHelper extends SQLiteOpenHelper {
+    String list[] = { "전체 게시판","자유 게시판", " 데스크탑","노트북/맥북/넷북","태블릿 PC","CPU/RAM/메인보드","HDD/SSD/ODD", "VGA","파워서플라이", "주변기기", "무료 나눔",
+                    "남성 악세사리", "여성 악세사리", "남성 의류", "여성 의류", "SKT 중고폰", "KT 중고폰", "LG 중고폰", "스마트폰 주변기기", "음향 기기", "가전 제품", "생활용품"};
 
     // DBHelper 생성자로 관리할 DB 이름과 버전 정보를 받음
     public DBHelper(Context context) {
@@ -18,7 +20,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
     //테이블 생성
-        String member, board, chat, exchange, location, exchange_reserve; //회원,게시판, 채팅, 거래, 위치 거래예약
+        String member, board, category, chat, exchange, location, exchange_reserve; //회원,게시판, 채팅, 거래, 위치 거래예약
 
         /* 회원 테이블 sql 정의 및 실행 */
         member = "create table if not exists member(_id text not null primary key," +
@@ -39,6 +41,16 @@ public class DBHelper extends SQLiteOpenHelper {
                 "board_location_y integer," + // 지도 위도
                 "board_reply_id integer not null)"; // 댓글
         db.execSQL(board);
+
+        category = "create table if not exists category(cat_id integer not null primary key auto increment," +
+                "cat_name text not null)"; // 카테고리
+        db.execSQL(category);
+
+   /*   String insert_cat_list = "insert into category(cat_name) values ";
+
+        for(int num = 0; num<21; num++)
+            db.execSQL(insert_cat_list+"('"+list[num]+"')");
+*/
 
     }
 

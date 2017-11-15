@@ -8,5 +8,69 @@
         android:title="My Acc"/>
     <item  android:id="@+id/nav_logout"
         android:title="logout"/>
+
+
+        <item  android:id="@+id/m0"
+            android:title="전체 게시판"/>
+
+        <item  android:id="@+id/m1"
+            android:title="자유 게시판"/>
+
+        <item  android:id="@+id/m2"
+            android:title="데스크탑"/>
+
+        <item  android:id="@+id/m3"
+            android:title="노트북/맥북/넷북"/>
+
+        <item  android:id="@+id/m4"
+            android:title="태블릿 PC"/>
+
+
+        <item  android:id="@+id/m5"
+            android:title="CPU/RAM/메인보드"/>
+
+        <item  android:id="@+id/m6"
+            android:title="HDD/SSD/ODD"/>
+
+        <item  android:id="@+id/m7"
+            android:title="VGA"/>
+
+        <item  android:id="@+id/m8"
+            android:title="파워서플라이"/>
+
+        <item  android:id="@+id/m9"
+            android:title="주변기기"/>
+
+        <item  android:id="@+id/m10"
+            android:title="무료 나눔"/>
+
+        <item  android:id="@+id/m11"
+            android:title="남성 악세사리"/>
+
+
+        <item  android:id="@+id/m12"
+            android:title="남성 의류"/>
+
+        <item  android:id="@+id/m13"
+            android:title="SKT 중고폰"/>
+
+
+        <item  android:id="@+id/m14"
+            android:title="KT 중고폰"/>
+
+        <item  android:id="@+id/m15"
+            android:title="LGT 중고폰"/>
+
+        <item  android:id="@+id/m16"
+            android:title="스마트폰 주변기기"/>
+
+        <item  android:id="@+id/m17"
+            android:title="음향 기기"/>
+
+        <item  android:id="@+id/m18"
+            android:title="가전 제품"/>
+
+        <item  android:id="@+id/m19"
+            android:title="생활용품"/>
     </group>
 </menu>
